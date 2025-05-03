@@ -209,7 +209,7 @@
 <!--						<image>docker.io/mangara2023/mali2</image>-->
 							<auth>
 							<username>${docker.username}</username>
-							<password>Bothell2023!</password>
+<!--							<password></password>-->
 						</auth>
 						<tags>
 							<tag>latest</tag>
