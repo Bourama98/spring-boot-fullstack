@@ -98,6 +98,7 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
 		<plugins>
 			<plugin>
@@ -206,6 +207,10 @@
 					<to>
 						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
 <!--						<image>docker.io/mangara2023/mali2</image>-->
+							<auth>
+							<username>${docker.username}</username>
+							<password>Bothell2023!</password>
+						</auth>
 						<tags>
 							<tag>latest</tag>
 						</tags>
