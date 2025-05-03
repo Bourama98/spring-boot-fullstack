@@ -11,10 +11,10 @@
 	<groupId>com.amigoscode</groupId>
 	<artifactId>amigoscode-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<organization>
-		<name>mangara2023</name>
-		<url>https://amigoscode.com</url>
-	</organization>
+<!--	<organization>-->
+<!--		<name>mangara2023</name>-->
+<!--		<url>https://amigoscode.com</url>-->
+<!--	</organization>-->
 	<name>spring-boot.example</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -22,6 +22,9 @@
 		<maven.compiler.target>23</maven.compiler.target>
 <!--		<java.version>23</java.version>-->
 		<docker.username>mangara2023</docker.username>
+		<docker.image.name>amigoscode-api</docker.image.name>
+		<docker.image.tag/>
+		<jsonwebtoken.version>0.11.5</jsonwebtoken.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -200,7 +203,7 @@
 						</platforms>
 					</from>
 					<to>
-						<image>docker.io/${organization.name}/${project.artifactId}:${project.version}</image>
+						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
 <!--						<image>docker.io/mangara2023/mali2</image>-->
 						<tags>
 							<tag>latest</tag>
