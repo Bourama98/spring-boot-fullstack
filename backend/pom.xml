@@ -11,6 +11,7 @@
 	<groupId>com.amigoscode</groupId>
 	<artifactId>amigoscode-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!--Added this comment to test pull request-->
 <!--	<organization>-->
 <!--		<name>mangara2023</name>-->
 <!--		<url>https://amigoscode.com</url>-->
