@@ -19,6 +19,8 @@ public class Main {
     public static void main(String[] args) {
 
         SpringApplication.run(Main.class, args);
+        //Added this line for testing the gitub action
+        System.out.println("Hello World!");
     }
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
