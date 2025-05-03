@@ -21,6 +21,7 @@ public class Main {
         SpringApplication.run(Main.class, args);
         //Added this line for testing the gitub action
         System.out.println("Hello World!222");
+        //test
     }
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
