@@ -24,7 +24,7 @@
 <!--		<java.version>23</java.version>-->
 		<docker.username>mangara2023</docker.username>
 		<docker.image.name>amigoscode-api</docker.image.name>
-		<docker.image.tag/>
+		<docker.image.tag>latest</docker.image.tag>
 		<jsonwebtoken.version>0.11.5</jsonwebtoken.version>
 	</properties>
 	<dependencies>
