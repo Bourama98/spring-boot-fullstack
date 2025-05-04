@@ -208,16 +208,16 @@
 						</platforms>
 					</from>
 					<to>
-<!--						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>-->
-						<image>docker.io/mangara2023/amigoscode-api</image>
+						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
+<!--						<image>docker.io/mangara2023/amigoscode-api</image>-->
 						<credHelper>none</credHelper>
-<!--                            <auth>-->
-<!--                                <username>${docker.username}</username>-->
-<!--                                <password>${env.DOCKER_PASSWORD}</password>-->
-<!--                            </auth>-->
-<!--						<tags>-->
-<!--							<tag>latest</tag>-->
-<!--						</tags>-->
+                            <auth>
+                                <username>mangara2023</username>
+                                <password>Bothell2023!</password>
+                            </auth>
+						<tags>
+							<tag>latest</tag>
+						</tags>
 					</to>
 				</configuration>
 				<executions>
