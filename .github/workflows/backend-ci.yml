@@ -36,5 +36,9 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
           cache: 'maven'
+
+      - name: Run Maven with Debugging
+        run: mvn -X clean install
+
       - name: Build and run Unit/Integration Tests with Maven
         run: mvn -ntp -B verify
