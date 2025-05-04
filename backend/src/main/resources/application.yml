@@ -15,5 +15,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  jmx:
+    enabled: true
   main:
     web-application-type: servlet

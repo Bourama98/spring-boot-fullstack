@@ -107,6 +107,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<wait>60000</wait> <!-- Increase timeout to 60 seconds -->
+				</configuration>
 				<executions>
 					<execution>
 						<id>pre-integration-test</id>
