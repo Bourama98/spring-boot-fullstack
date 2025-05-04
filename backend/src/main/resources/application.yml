@@ -17,5 +17,6 @@ spring:
     show-sql: true
   jmx:
     enabled: true
+
   main:
     web-application-type: servlet
