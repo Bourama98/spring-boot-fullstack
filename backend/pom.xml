@@ -107,6 +107,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<jvmArguments>
+						-Dcom.sun.management.jmxremote
+						-Dcom.sun.management.jmxremote.port=9001
+						-Dcom.sun.management.jmxremote.ssl=false
+						-Dcom.sun.management.jmxremote.authenticate=false
+					</jvmArguments>
+				</configuration>
 <!--				<configuration>-->
 <!--					<wait>60000</wait> &lt;!&ndash; Increase timeout to 60 seconds &ndash;&gt;-->
 <!--				</configuration>-->
