@@ -214,9 +214,9 @@
 <!--                                <username>${docker.username}</username>-->
 <!--                                <password>${env.DOCKER_PASSWORD}</password>-->
 <!--                            </auth>-->
-<!--						<tags>-->
-<!--							<tag>latest</tag>-->
-<!--						</tags>-->
+						<tags>
+							<tag>latest</tag>
+						</tags>
 					</to>
 				</configuration>
 				<executions>
