@@ -120,24 +120,24 @@
 <!--				<configuration>-->
 <!--					<wait>60000</wait> &lt;!&ndash; Increase timeout to 60 seconds &ndash;&gt;-->
 <!--				</configuration>-->
-				<executions>
-					<execution>
-						<id>pre-integration-test</id>
-						<goals>
-							<goal>start</goal>
-						</goals>
-						<configuration>
-							<arguments>
-								<argument>--server.port=${tomcat.http.port}</argument>
-							</arguments>
-						</configuration>
-					</execution>
-					<execution>
-						<id>post-integration-test</id>
-						<goals>
-							<goal>stop</goal>
-						</goals>
-					</execution>
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>pre-integration-test</id>-->
+<!--						<goals>-->
+<!--							<goal>start</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<arguments>-->
+<!--								<argument>&#45;&#45;server.port=${tomcat.http.port}</argument>-->
+<!--							</arguments>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--					<execution>-->
+<!--						<id>post-integration-test</id>-->
+<!--						<goals>-->
+<!--							<goal>stop</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
 				</executions>
 			</plugin>
 			<!-- Added the plugins below to remove mockito error message -->
