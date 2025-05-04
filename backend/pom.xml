@@ -208,15 +208,15 @@
 						</platforms>
 					</from>
 					<to>
-						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
-<!--						<image>docker.io/mangara2023/mali2</image>-->
-                            <auth>
-                                <username>${docker.username}</username>
-                                <password>${env.DOCKER_PASSWORD}</password>
-                            </auth>
-						<tags>
-							<tag>latest</tag>
-						</tags>
+<!--						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>-->
+						<image>docker.io/mangara2023/amigoscode-api:latest</image>
+<!--                            <auth>-->
+<!--                                <username>${docker.username}</username>-->
+<!--                                <password>${env.DOCKER_PASSWORD}</password>-->
+<!--                            </auth>-->
+<!--						<tags>-->
+<!--							<tag>latest</tag>-->
+<!--						</tags>-->
 					</to>
 				</configuration>
 				<executions>
