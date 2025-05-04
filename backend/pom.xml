@@ -138,7 +138,7 @@
 <!--							<goal>stop</goal>-->
 <!--						</goals>-->
 <!--					</execution>-->
-				</executions>
+<!--				</executions>-->
 			</plugin>
 			<!-- Added the plugins below to remove mockito error message -->
 <!--			<plugin>-->
