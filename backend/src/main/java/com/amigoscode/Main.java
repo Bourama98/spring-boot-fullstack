@@ -19,6 +19,7 @@ public class Main {
     public static void main(String[] args) {
 
         SpringApplication.run(Main.class, args);
+        //Testing 5
     }
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
