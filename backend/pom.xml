@@ -18,8 +18,8 @@
 	<name>spring-boot.example</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<maven.compiler.source>23</maven.compiler.source>
-		<maven.compiler.target>23</maven.compiler.target>
+		<maven.compiler.source>24</maven.compiler.source>
+		<maven.compiler.target>24</maven.compiler.target>
 <!--		<java.version>23</java.version>-->
 		<docker.username>mangara2023</docker.username>
 		<docker.image.name>amigoscode-api</docker.image.name>
@@ -189,7 +189,7 @@
 				<version>3.4.5</version>
 				<configuration>
 					<from>
-						<image>eclipse-temurin:23-jdk-ubi9-minimal</image>
+						<image>eclipse-temurin:24l</image>
 						<platforms>
 							<platform>
 								<architecture>arm64</architecture>
