@@ -8,7 +8,7 @@ public class PingPongCOntroller {
     record PingPong(String result){}
 
     @GetMapping("/ping")
-    public PingPong getPingPong(){
+    private PingPong getPingPong(){
         return new PingPong("pong: Mangara AWA77");
     }
 }
