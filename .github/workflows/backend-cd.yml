@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:17.2
+        image: postgres:17.5
         env:
           POSTGRES_USER: mangara
           POSTGRES_PASSWORD: password
@@ -100,7 +100,7 @@ jobs:
       - name: Send Slack Message
         run: >
           curl -X POST -H 'Content-type: application/json'
-          --data '{"text":" :github-check-mark: :party_blob: Commiting to repo http://http://my-api2-env.eba-y2vsfamk.us-west-1.elasticbeanstalk.com/  :party_blob::github-check-mark:"}'
+          --data '{"text":" :github-check-mark: :party_blob: Commiting to repo http://my-api2-env.eba-y2vsfamk.us-west-1.elasticbeanstalk.com/  :party_blob::github-check-mark:"}'
           ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Send Slack Message
         if: always()
