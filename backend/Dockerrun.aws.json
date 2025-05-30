@@ -12,12 +12,12 @@
           "containerPort": 8080
         }
       ],
-    "environment": [
-      {
-        "name": "SPRING_DATASOURCE_URL",
-        "value": "jdbc:postgresql://awseb-e-hiaectmh9e-stack-awsebrdsdatabase-kkydyao6xqgg.ctyukymkwh6y.us-west-1.rds.amazonaws.com:5432/customer"
-      }
-    ]
+      "environment": [
+        {
+          "name": "SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-hq3q9fehf9-stack-awsebrdsdatabase-0d4nfbcjoaf2.c18ooqo8w58t.us-west-2.rds.amazonaws.com:5432/customer"
+        }
+      ]
     }
   ]
 }
