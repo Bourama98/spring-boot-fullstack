@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "amigoscode-api",
-      "image": "mangara2023/amigoscode-api:latest",
+      "image": "mangara2023/amigoscode-api:30.05.2025.07.45.52",
       "essential": true,
       "memory": 512,
       "portMappings": [
