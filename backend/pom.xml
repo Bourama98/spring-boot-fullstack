@@ -203,15 +203,15 @@
 					</from>
 					<to>
 						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
-						<image>docker.io/mangara2023/mali2</image>
-						<credHelper>none</credHelper>
-						<auth>
-							<username>mangara2023</username>
-							<password>Bothell2023!</password>
-						</auth>
-						<tags>
-							<tag>latest</tag>
-						</tags>
+<!--						<image>docker.io/mangara2023/mali2</image>-->
+<!--						<credHelper>none</credHelper>-->
+<!--						<auth>-->
+<!--							<username>mangara2023</username>-->
+<!--							<password>Bothell2023!</password>-->
+<!--						</auth>-->
+<!--						<tags>-->
+<!--							<tag>latest</tag>-->
+<!--						</tags>-->
 					</to>
 				</configuration>
 				<executions>
