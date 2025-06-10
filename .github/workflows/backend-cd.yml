@@ -28,11 +28,17 @@ jobs:
       run:
         working-directory: ./backend
     steps:
+
       - uses: actions/checkout@v4
       - name: Send Slack Message
         run: >
           curl -X POST -H 'Content-type: application/json'
-          --data '{"text":"Deployment started https://github.com/Bourama98/spring-boot-fullstack/commit/${{ github.sha }} - ${{ github.event.head_commit.message }} :progress_bar: :fingerscrossed:"}'
+          --data '{"text":"Deployment started :progress_bar: :fingerscrossed:"}'
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Echo commit message and sha
+        run: >
+          curl -X POST -H 'Content-type: application/json'
+          --data '{"text":":github: https://github.com/Bourama98/spring-boot-fullstack/commit/${{ github.sha }} - ${{ github.event.head_commit.message }} :progress_bar: :fingerscrossed:"}'
           ${{ secrets.SLACK_WEBHOOK_URL }}
       - uses: actions/setup-java@v4
         with:
