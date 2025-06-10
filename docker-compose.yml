@@ -17,7 +17,7 @@ services:
     container_name: amigoscode-api
     image: mangara2023/amigoscode-api
     environment:
-       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5332/customer
+       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
     ports:
       - "8088:8080"
     networks:
