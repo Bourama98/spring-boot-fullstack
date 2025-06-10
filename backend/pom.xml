@@ -209,9 +209,9 @@
 <!--							<username>mangara2023</username>-->
 <!--							<password>Bothell2023!</password>-->
 <!--						</auth>-->
-<!--						<tags>-->
-<!--							<tag>latest</tag>-->
-<!--						</tags>-->
+						<tags>
+							<tag>latest</tag>
+						</tags>
 					</to>
 				</configuration>
 				<executions>
