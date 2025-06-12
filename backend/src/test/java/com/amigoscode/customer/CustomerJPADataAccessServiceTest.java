@@ -1,17 +1,14 @@
 package com.amigoscode.customer;
 
 import com.amigoscode.AbstractTestContainers;
-import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 
 class CustomerJPADataAccessServiceTest extends AbstractTestContainers {
@@ -60,8 +57,8 @@ class CustomerJPADataAccessServiceTest extends AbstractTestContainers {
         Customer actual = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         // When
         underTest.insertCustomer(actual);
 
@@ -111,8 +108,8 @@ class CustomerJPADataAccessServiceTest extends AbstractTestContainers {
         Customer actual = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
 
         // When
         underTest.updateCustomer(actual);

@@ -33,8 +33,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
         Customer actual = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(actual);
         //WHEN
         List<Customer> actualCustomer = underTest.selectAllCustomers();
@@ -51,8 +51,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
@@ -93,8 +93,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         //When
         underTest.insertCustomer(customer);
 
@@ -125,8 +125,8 @@ class CustomerJDBCDataAccessServiceTest extends AbstractTestContainers {
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         //When
         boolean actual = underTest.existsCustomerWithEmail(email);
@@ -153,8 +153,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
 
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
@@ -180,8 +180,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
@@ -216,8 +216,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
@@ -251,8 +251,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
@@ -285,8 +285,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
@@ -319,8 +319,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
@@ -332,11 +332,13 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         var newName = faker.name().fullName()+"New";
         var newEmail = faker.internet().safeEmailAddress() + "-" + UUID.randomUUID();
         int newAge = 180;
+
         Customer update = new Customer();
         update.setId(id);
         update.setName(newName);
         update.setEmail(newEmail);
         update.setAge(newAge);
+        update.setGender(Gender.MALE);
         underTest.updateCustomer(update);
 
         // Then
@@ -346,6 +348,7 @@ boolean actual = underTest.existsCustomerWithEmail(email);
             assertThat(c.getName()).isEqualTo(newName);
             assertThat(c.getEmail()).isEqualTo(newEmail);
             assertThat(c.getAge()).isEqualTo(newAge);
+            assertThat(c.getGender()).isEqualTo(Gender.MALE);
         });
 
     }
@@ -358,8 +361,8 @@ boolean actual = underTest.existsCustomerWithEmail(email);
         Customer customer = new Customer(
                 name,
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.insertCustomer(customer);
         int id = underTest.selectAllCustomers()
                 .stream()
