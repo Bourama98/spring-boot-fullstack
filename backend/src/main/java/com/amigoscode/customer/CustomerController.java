@@ -19,6 +19,7 @@ public class CustomerController {
     public List<Customer> getCustomers(){
         return customerService.getAllCustomers();
     }
+
     @GetMapping(path = "/{customerId}")
     public Customer getCustomer(@PathVariable("customerId") Integer customerId){
 

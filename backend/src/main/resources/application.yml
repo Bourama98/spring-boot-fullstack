@@ -3,8 +3,10 @@ server:
   error:
     include-message: always
 cors:
-  allowed-origins: "*" # we can add specific url with coma separated.
+  allowed-origins: "*"
   allowed-methods: "*"
+  allowed-headers: "*"
+  exposed-headers: "*"
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/customer

@@ -4,21 +4,30 @@ import {useEffect, useState} from "react";
 import {getCustomers} from "./services/client.js";
 import {Spinner} from "@chakra-ui/react"
 import CardWithImage from "./components/card.jsx";
+import CreateCustomerDrawer from "./components/CreateCustomerDrawer.jsx";
+import {errorNotification} from "./services/notification.js";
 
 const App = () => {
 
     const [customers, setCustomers] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    const [err, setError] = useState("");
+const fetchCustomers = ()=>{
+    setLoading(true)
+    getCustomers().then(res => {
+        setCustomers(res.data)
+    }).catch(err => {
+        setError(err.response.data.message);
+        errorNotification(
+            err.code,
+            err.response.data.message
+        )
+    }).finally(() => {
+        setLoading(false)
+    })
+}
     useEffect(() => {
-        setLoading(true)
-        getCustomers().then(res => {
-            setCustomers(res.data)
-        }).catch(err => {
-            console.log(err)
-        }).finally(() => {
-            setLoading(false)
-        })
+fetchCustomers();
     }, [])
 
     if (loading) {
@@ -35,25 +44,39 @@ const App = () => {
             </SidebarWithHeader>
         )
     }
+    if(err){
+        return (
+            <SidebarWithHeader>
+                <CreateCustomerDrawer
+                    fetchCustomers={fetchCustomers}
+                />
+                <Text mt={5}>Ooops there was an error</Text>
+            </SidebarWithHeader>
+        )
+    }
+
     if (customers.length <= 0) {
         return (
             <SidebarWithHeader>
-                <Text>No customers available</Text>
+                <CreateCustomerDrawer
+                    fetchCustomers={fetchCustomers}
+                />
+                <Text mt={5}>No customers available</Text>
             </SidebarWithHeader>
         )
     }
     return (
         <SidebarWithHeader>
+            <CreateCustomerDrawer
+                fetchCustomers={fetchCustomers}
+            />
             <Wrap spacing={"30px"} justify={"center"}>
-                {customers.map((customer, index) => (
+                {customers.map((customer, index) =>(
                     <WrapItem key={index}>
                         <CardWithImage
-                            // id={customer.id}
-                            // name={customer.name}
-                            // email={customer.email}
-                            // age={customer.age}
                             {...customer}
                             imageNumber={index}
+                            fetchCustomers={fetchCustomers}
                         />
 
                     </WrapItem>
